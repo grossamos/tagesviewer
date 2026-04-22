@@ -24,3 +24,8 @@ target_link_libraries(${BINARY_NAME} PRIVATE flutter)
 target_link_libraries(${BINARY_NAME} PRIVATE PkgConfig::GTK)
 
 target_include_directories(${BINARY_NAME} PRIVATE "${CMAKE_SOURCE_DIR}")
+
+# Provide the icon path as a compile-time constant.
+target_compile_definitions(${BINARY_NAME} PRIVATE
+  ICON_PATH="${CMAKE_CURRENT_SOURCE_DIR}/icon.png"
+)

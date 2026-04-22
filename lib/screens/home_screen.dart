@@ -22,7 +22,10 @@ class _HomeScreenState extends State<HomeScreen> {
     _future = _service.fetchHomepage();
   }
 
-  void _refresh() => setState(() => _future = _service.fetchHomepage());
+  void _refresh() {
+    final next = _service.fetchHomepage();
+    setState(() { _future = next; });
+  }
 
   @override
   Widget build(BuildContext context) {
