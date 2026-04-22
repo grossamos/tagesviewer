@@ -1,0 +1,7 @@
+Tagesviewer ist ein freier und quelloffener Client für tagesschau.de, den Nachrichtendienst der ARD – eine Alternative zur offiziellen Closed-Source-App.
+
+Funktionen:
+* Aktuelle Schlagzeilen von tagesschau.de
+* Vollständige Artikel mit Bildern
+* Verwandte Artikel
+* Kein Tracking, keine Werbung

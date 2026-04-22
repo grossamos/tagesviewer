@@ -1,0 +1,51 @@
+Categories:
+  - News
+License: BSD-4-Clause
+AuthorName: Amos Gross
+SourceCode: https://github.com/grossamos/tagesviewer
+IssueTracker: https://github.com/grossamos/tagesviewer/issues
+
+Name: Tagesviewer
+Summary: Open-source client for tagesschau.de news
+
+Description: |-
+  Tagesviewer is a free and open-source client for tagesschau.de, the news
+  service of Germany's public broadcaster ARD — an alternative to the official
+  closed-source app.
+
+  Features:
+
+  * Current headlines from tagesschau.de
+  * Full article text and images
+  * Related articles
+  * No tracking, no ads
+
+AntiFeatures:
+  NonFreeNet:
+    en-US: Depends entirely on the proprietary tagesschau.de service.
+
+RepoType: git
+Repo: https://github.com/grossamos/tagesviewer
+
+Builds:
+  - versionName: 1.0.0
+    versionCode: 1
+    commit: v1.0.0
+    rm:
+      - ios
+      - linux
+      - web
+      - windows
+      - macos
+    output: build/app/outputs/apk/release/app-release.apk
+    srclibs:
+      - flutter@3.41.6
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - $$flutter$$/bin/flutter build apk --release
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.0.0
+CurrentVersionCode: 1
